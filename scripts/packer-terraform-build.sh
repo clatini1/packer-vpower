@@ -6,3 +6,6 @@ cd ./packer-config
 cd ../terraform-config
 ./terraform plan
 ./terraform apply -auto-approve
+git add terraform.tfstate
+git commit -m "terraform.tfstate"
+git push origin master
