@@ -8,4 +8,4 @@ cd ../terraform-config
 ./terraform apply -auto-approve
 git add terraform.tfstate
 git commit -m "terraform.tfstate"
-git push origin master
+git push origin HEAD:master
