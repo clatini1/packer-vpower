@@ -13,6 +13,7 @@ data "aws_ami" "aws_ami_image" {
 }
 
 resource "aws_instance" "ec2-core-packer" {
+  count = 1
   ami           = "${data.aws_ami.aws_ami_image.id}"
   instance_type = "t2.small"
 
