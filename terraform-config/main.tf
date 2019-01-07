@@ -23,6 +23,10 @@ resource "aws_instance" "ec2-core-packer" {
     # encrypted = "true"
   }
 
+  lifecycle {
+    create_before_destroy = true
+  }
+
   tags {
     Name      = "packer-terraform-test"
     config_mgmt = "terraform"
